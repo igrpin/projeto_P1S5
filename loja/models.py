@@ -16,6 +16,7 @@ class Cliente(models.Model):
     username = models.CharField(null=False, blank=False, max_length=120, verbose_name='Perfil', default='')
     boolSegueALoja = models.BooleanField(blank=False, null=False, verbose_name='Cliente segue a loja nessa rede?',
                                          default=False)
+    uploadFoto = models.FileField(upload_to='media_cliente/', blank=True, null=True)
 
     def __str__(self):
         return str(self.pk) + ' ---||--- ' + self.nome
