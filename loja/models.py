@@ -56,7 +56,7 @@ class Produto(models.Model):
 
 
 class CategoriaProduto(models.Model):
-    pass
+    categoria = models.CharField(null=False, blank=False, max_length=255, verbose_name='Categoria')
 
 
 class Marca(models.Model):
