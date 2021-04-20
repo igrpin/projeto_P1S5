@@ -35,15 +35,15 @@ class Funcionario(models.Model):
 
 
 
-# class Venda(models.Model):
-#     data_hora_venda = models.DateTimeField(auto_now_add=True, blank=True, null=False)
-#     bool_concluida = models.BooleanField(blank=False, null=False, verbose_name='Venda concluída?')
-#     valor_total = models.DecimalField(max_digits=6, decimal_places=2, verbose_name='Valor Total')
-#     # Relacionamentos
-#     vendaProdutoId = models.ManyToManyField('Produto')
-#     clienteId = models.ForeignKey('Cliente', on_delete=models.DO_NOTHING)
-#     funcionarioId = models.ForeignKey('Funcionario', on_delete=models.DO_NOTHING)
-#     formaPagamentoId = models.OneToOneField('FormaPagamento', on_delete=models.DO_NOTHING)
+class Venda(models.Model):
+    data_hora_venda = models.DateTimeField(auto_now_add=True, blank=True, null=False)
+    bool_concluida = models.BooleanField(blank=False, null=False, verbose_name='Venda concluída?')
+    valor_total = models.DecimalField(max_digits=6, decimal_places=2, verbose_name='Valor Total')
+    # Relacionamentos
+    vendaProdutoId = models.ManyToManyField('Produto')
+    clienteId = models.ForeignKey('Cliente', on_delete=models.DO_NOTHING)
+    funcionarioId = models.ForeignKey('Funcionario', on_delete=models.DO_NOTHING)
+    formaPagamentoId = models.OneToOneField('FormaPagamento', on_delete=models.DO_NOTHING)
 
 
 class Produto(models.Model):

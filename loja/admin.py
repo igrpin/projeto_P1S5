@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Cliente, Sexo, TelefoneCliente, Profissao, \
-    Funcionario, Setor, Cargo, RedeSocial, RedeSocialCliente
+    Funcionario, Setor, Cargo, RedeSocial, RedeSocialCliente, Venda
 
 
 admin.site.register(Cliente)
@@ -12,3 +12,4 @@ admin.site.register(Funcionario)
 admin.site.register(Setor)
 admin.site.register(Cargo)
 admin.site.register(RedeSocial)
+admin.site.register(Venda)
