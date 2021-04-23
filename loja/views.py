@@ -11,4 +11,4 @@ class CadastrarClienteCreateView(CreateView):
     fields = '__all__'
 
     def get_success_url(self):
-        return reverse_lazy("")
+        return reverse_lazy("cadastrarCliente")

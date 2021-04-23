@@ -4,10 +4,15 @@ from .models import Cliente, Sexo, TelefoneCliente, Profissao, \
     CategoriaProduto, Marca, FormaPagamento
 
 
-admin.site.register(Cliente)
+# admin.site.register(Cliente)
+@admin.register(Cliente)
+class ClienteAdmin(admin.ModelAdmin):
+    list_display = ("nome", "profissaoId", "redeSocial", "username")
+
+
 admin.site.register(Sexo)
 admin.site.register(TelefoneCliente)
-admin.site.register(RedeSocialCliente)
+# admin.site.register(RedeSocialCliente)
 admin.site.register(Profissao)
 admin.site.register(Funcionario)
 admin.site.register(Setor)

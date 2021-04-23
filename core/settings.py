@@ -30,15 +30,36 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+# INSTALLED_APPS = [
+#     'django.contrib.admin',
+#     'django.contrib.auth',
+#     'django.contrib.contenttypes',
+#     'django.contrib.sessions',
+#     'django.contrib.messages',
+#     'django.contrib.staticfiles',
+#     'loja',
+# ]
+
+# Application definition
+
+DEFAULT_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+]
+
+MY_APPS = [
     'loja',
 ]
+
+THIRDS_APPS = [
+    'bootstrapform',
+]
+
+INSTALLED_APPS = DEFAULT_APPS + MY_APPS + THIRDS_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

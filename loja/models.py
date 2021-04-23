@@ -9,8 +9,7 @@ class Cliente(models.Model):
     data_nascimento = models.DateField(blank=False, null=False)
     telefoneCliente = models.CharField(null=False, blank=False, max_length=11, verbose_name='Telefone')
     profissaoId = models.ForeignKey('Profissao', on_delete=models.DO_NOTHING, verbose_name='Profissao')
-    sexoId = models.OneToOneField('Sexo', on_delete=models.DO_NOTHING, verbose_name='Sexo',
-                                  primary_key=True, null=False, default=1)
+    sexoId = models.ForeignKey('Sexo', on_delete=models.DO_NOTHING, verbose_name='Sexo', null=False, default=1)
     #redeSocialCliente = models.ForeignKey('RedeSocialCliente', verbose_name='Redes sociais', null=True, on_delete=models.DO_NOTHING)
     redeSocial = models.ForeignKey('RedeSocial', verbose_name='Rede social', null=True, on_delete=models.DO_NOTHING)
     username = models.CharField(null=False, blank=False, max_length=120, verbose_name='Perfil', default='')
