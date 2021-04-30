@@ -2,7 +2,6 @@ from django.db import models
 
 
 class Cliente(models.Model):
-<<<<<<< HEAD
     nomeCliente = models.CharField(null=False, blank=False, max_length=255, verbose_name='Nome do cliente')
     cpf = models.CharField(null=False, blank=False, max_length=11, verbose_name='CPF')
     email = models.EmailField(null=True, blank=True, verbose_name='E-mail')
