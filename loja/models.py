@@ -2,11 +2,7 @@ from django.db import models
 
 
 class Cliente(models.Model):
-<<<<<<< HEAD
     nome_cliente = models.CharField(null=False, blank=False, max_length=255, verbose_name='Nome do cliente')
-=======
-    nom = models.CharField(null=False, blank=False, max_length=255, verbose_name='Nome do cliente')
->>>>>>> f08f26d7239600fd19a1f08d303d5952c6293856
     cpf = models.CharField(null=False, blank=False, max_length=11, verbose_name='CPF')
     email = models.EmailField(null=True, blank=True, verbose_name='E-mail')
     data_hora_cadastro = models.DateTimeField(auto_now_add=True, blank=True, null=False)
